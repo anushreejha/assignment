@@ -1,0 +1,81 @@
+.dashboard-container {
+  background-color: black;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.help-icon {
+  width: 50px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.logo {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.title-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.curved-box {
+  background-color: #1F1919;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 20px;
+}
+
+.data-container {
+  margin-top: 40px;
+}
+
+.data-entry {
+  margin-bottom: 20px;
+}
+
+.data-entry span {
+  color: white; /* Set the color of all spans to white */
+  font-size: 18px; /* Added font-size for consistency */
+}
+
+.progress-bar {
+  height: 15px;
+  background-color: #36A546;
+}
+
+.bottom-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F2323;
+  padding: 10px;
+  border-radius: 25px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.bottom-banner .icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 20px; /* Adjust margin between buttons */
+}
+
+.bottom-banner .icon-button img {
+  max-width: 50px; /* Adjust icon size */
+}
+
+.bottom-banner .icon-button:hover {
+  background-color: #38383885; /* Change hover background color */
+}

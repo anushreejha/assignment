@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Login from './Login';
+import Dashboard from './Dashboard';
+import Search from './Search';
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [currentPage, setCurrentPage] = useState('login');
+
+  const handleLogin = () => {
+    // Perform login logic here...
+    setLoggedIn(true);
+    setCurrentPage('dashboard');
+  };
+
+  const handleDashboardClick = () => {
+    setCurrentPage('dashboard');
+  };
+
+  const handleSearchClick = () => {
+    setCurrentPage('search');
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loggedIn ? (
+        currentPage === 'dashboard' ? (
+          <Dashboard handleSearch={handleSearchClick} />
+        ) : (
+          <Search handleDashboardClick={handleDashboardClick} />
+        )
+      ) : (
+        <Login setLoggedIn={handleLogin} />
+      )}
     </div>
   );
 }
